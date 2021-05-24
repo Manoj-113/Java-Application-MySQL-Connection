@@ -165,6 +165,8 @@ public class JFrame extends javax.swing.JFrame {
         jTextField6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jTextField6.setText("jTextField1");
 
+        jTable2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTable2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
