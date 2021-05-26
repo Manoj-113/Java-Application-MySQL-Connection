@@ -26,12 +26,12 @@ public class JFrame extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        jbtnAddNew = new javax.swing.JButton();
+        jbtnUpdate = new javax.swing.JButton();
+        jbtnReset = new javax.swing.JButton();
+        jbtnPrint = new javax.swing.JButton();
+        jbtnExit = new javax.swing.JButton();
+        jbtnDelete = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -70,45 +70,45 @@ public class JFrame extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(125, 10, 121), 8));
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 51));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(153, 255, 255));
-        jButton1.setText("Add New Data");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbtnAddNew.setBackground(new java.awt.Color(0, 102, 51));
+        jbtnAddNew.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbtnAddNew.setForeground(new java.awt.Color(153, 255, 255));
+        jbtnAddNew.setText("Add New");
+        jbtnAddNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbtnAddNewActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 102, 51));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(153, 255, 255));
-        jButton2.setText("Update Data");
+        jbtnUpdate.setBackground(new java.awt.Color(0, 102, 51));
+        jbtnUpdate.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbtnUpdate.setForeground(new java.awt.Color(153, 255, 255));
+        jbtnUpdate.setText("Update");
 
-        jButton3.setBackground(new java.awt.Color(0, 102, 51));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(153, 255, 255));
-        jButton3.setText("Rest");
+        jbtnReset.setBackground(new java.awt.Color(0, 102, 51));
+        jbtnReset.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbtnReset.setForeground(new java.awt.Color(153, 255, 255));
+        jbtnReset.setText("Reset");
 
-        jButton4.setBackground(new java.awt.Color(0, 102, 51));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(153, 255, 255));
-        jButton4.setText("Print");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jbtnPrint.setBackground(new java.awt.Color(0, 102, 51));
+        jbtnPrint.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbtnPrint.setForeground(new java.awt.Color(153, 255, 255));
+        jbtnPrint.setText("Print");
+        jbtnPrint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jbtnPrintActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(0, 102, 51));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(153, 255, 255));
-        jButton5.setText("Exit");
+        jbtnExit.setBackground(new java.awt.Color(0, 102, 51));
+        jbtnExit.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbtnExit.setForeground(new java.awt.Color(153, 255, 255));
+        jbtnExit.setText("Exit");
 
-        jButton6.setBackground(new java.awt.Color(0, 102, 51));
-        jButton6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(153, 255, 255));
-        jButton6.setText("Delete");
+        jbtnDelete.setBackground(new java.awt.Color(0, 102, 51));
+        jbtnDelete.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbtnDelete.setForeground(new java.awt.Color(153, 255, 255));
+        jbtnDelete.setText("Delete");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -117,29 +117,29 @@ public class JFrame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jbtnAddNew, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnPrint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtnAddNew, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtnPrint, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
         );
 
@@ -317,13 +317,13 @@ public class JFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbtnAddNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAddNewActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbtnAddNewActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jbtnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPrintActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_jbtnPrintActionPerformed
 
 
     public static void main(String args[]) {
@@ -336,12 +336,6 @@ public class JFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -363,5 +357,11 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JButton jbtnAddNew;
+    private javax.swing.JButton jbtnDelete;
+    private javax.swing.JButton jbtnExit;
+    private javax.swing.JButton jbtnPrint;
+    private javax.swing.JButton jbtnReset;
+    private javax.swing.JButton jbtnUpdate;
     // End of variables declaration//GEN-END:variables
 }

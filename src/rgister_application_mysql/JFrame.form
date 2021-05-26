@@ -114,12 +114,12 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton1" max="32767" attributes="0"/>
-                          <Component id="jButton2" max="32767" attributes="0"/>
-                          <Component id="jButton4" max="32767" attributes="0"/>
-                          <Component id="jButton3" max="32767" attributes="0"/>
-                          <Component id="jButton5" max="32767" attributes="0"/>
-                          <Component id="jButton6" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jbtnAddNew" max="32767" attributes="0"/>
+                          <Component id="jbtnUpdate" max="32767" attributes="0"/>
+                          <Component id="jbtnPrint" max="32767" attributes="0"/>
+                          <Component id="jbtnReset" max="32767" attributes="0"/>
+                          <Component id="jbtnExit" max="32767" attributes="0"/>
+                          <Component id="jbtnDelete" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="44" max="32767" attributes="0"/>
                   </Group>
@@ -129,24 +129,24 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="jbtnAddNew" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="jbtnUpdate" min="-2" pref="45" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jButton4" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="jbtnPrint" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="jbtnReset" min="-2" pref="51" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                      <Component id="jButton6" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="jbtnDelete" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                      <Component id="jButton5" min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="jbtnExit" min="-2" pref="47" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="jbtnAddNew">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="66" red="0" type="rgb"/>
@@ -157,13 +157,13 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="99" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Add New Data"/>
+                <Property name="text" type="java.lang.String" value="Add New"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnAddNewActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="jbtnUpdate">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="66" red="0" type="rgb"/>
@@ -174,10 +174,10 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="99" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Update Data"/>
+                <Property name="text" type="java.lang.String" value="Update"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="jbtnReset">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="66" red="0" type="rgb"/>
@@ -188,10 +188,10 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="99" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Rest"/>
+                <Property name="text" type="java.lang.String" value="Reset"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="jbtnPrint">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="66" red="0" type="rgb"/>
@@ -205,10 +205,10 @@
                 <Property name="text" type="java.lang.String" value="Print"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnPrintActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton5">
+            <Component class="javax.swing.JButton" name="jbtnExit">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="66" red="0" type="rgb"/>
@@ -222,7 +222,7 @@
                 <Property name="text" type="java.lang.String" value="Exit"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton6">
+            <Component class="javax.swing.JButton" name="jbtnDelete">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="66" red="0" type="rgb"/>
