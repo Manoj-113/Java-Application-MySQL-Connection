@@ -6,6 +6,7 @@
 package rgister_application_mysql;
 
 import javax.swing.JOptionPane;
+import javax.swing.JFrame;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -26,12 +27,12 @@ import java.util.Vector;
  *
  * @author SUCCESS
  */
-public class JFrame extends javax.swing.JFrame {
+public class Java_MysqlConn extends javax.swing.JFrame {
 
     /**
      * Creates new form JFrame
      */
-    public JFrame() {
+    public Java_MysqlConn(String exit) {
         initComponents();
     }
 
@@ -121,6 +122,11 @@ public class JFrame extends javax.swing.JFrame {
         jbtnExit.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jbtnExit.setForeground(new java.awt.Color(153, 255, 255));
         jbtnExit.setText("Exit");
+        jbtnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnExitActionPerformed(evt);
+            }
+        });
 
         jbtnDelete.setBackground(new java.awt.Color(0, 102, 51));
         jbtnDelete.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -281,7 +287,7 @@ public class JFrame extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(261, Short.MAX_VALUE)
+                .addContainerGap(204, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(231, 231, 231))
         );
@@ -319,7 +325,7 @@ public class JFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 800));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 800));
 
         pack();
         setLocationRelativeTo(null);
@@ -337,12 +343,22 @@ public class JFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxtStudentIDActionPerformed
 
+    private Java_MysqlConn frame;
+    private void jbtnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnExitActionPerformed
+        
+        frame = new Java_MysqlConn("Exit");
+        if (JOptionPane.showConfirmDialog(frame, "Confirm if you want to exit", "MySQL Connector",
+                JOptionPane.YES_NO_OPTION)== JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jbtnExitActionPerformed
+
 
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFrame().setVisible(true);
+                new Java_MysqlConn("Exit").setVisible(true);
             }
         });
     }
