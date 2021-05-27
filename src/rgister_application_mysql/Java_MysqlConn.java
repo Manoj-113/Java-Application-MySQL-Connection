@@ -29,9 +29,13 @@ import java.util.Vector;
  */
 public class Java_MysqlConn extends javax.swing.JFrame {
 
-    /**
-     * Creates new form JFrame
-     */
+    private static final String username = "root";
+    private static final String password = "1234";
+    private static final String dataConn = "jdbc:mysql://localhost:336/connector";
+    
+    Connection sqlConn = null;
+    
+    
     public Java_MysqlConn(String exit) {
         initComponents();
     }
