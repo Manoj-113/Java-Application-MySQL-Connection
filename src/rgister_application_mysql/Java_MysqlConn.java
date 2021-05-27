@@ -397,7 +397,7 @@ public class Java_MysqlConn extends javax.swing.JFrame {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             sqlConn = DriverManager.getConnection(dataConn,username,password);
-            pst = sqlConn.prepareStatement("insert into connector(StudentId,Firstname,Surname,Address,"+"PostCode,Telephone)");
+            pst = sqlConn.prepareStatement("insert into connector(StudentId,Firstname,Surname,Address,"+"PostCode,Telephone)value(?,?,?,?,?,?)");
             
             pst.setString(1, jtxtStudentID.getText());
             pst.setString(2, jtxtFirstname.getText());
