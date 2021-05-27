@@ -68,14 +68,15 @@ public class Java_MysqlConn extends javax.swing.JFrame {
                 
                 for(i = 1; i<=q; i++){
                     columnData.add(rs.getShort("id"));
-                    columnData.add(rs.getShort("id"));
-                    columnData.add(rs.getShort("id"));
-                    columnData.add(rs.getShort("id"));
-                    columnData.add(rs.getShort("id"));
-                    columnData.add(rs.getShort("id"));
-                    columnData.add(rs.getShort("id"));
+                    columnData.add(rs.getShort("StudentID"));
+                    columnData.add(rs.getShort("Firstname"));
+                    columnData.add(rs.getShort("Surname"));
+                    columnData.add(rs.getShort("Address"));
+                    columnData.add(rs.getShort("PostCode"));
+                    columnData.add(rs.getShort("Telephone"));
                     
                 }
+                RecordTable.addRow(columnData);
             }
             
         } catch (ClassNotFoundException ex) {
@@ -392,7 +393,27 @@ public class Java_MysqlConn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnAddNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAddNewActionPerformed
-        // TODO add your handling code here:
+        
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            sqlConn = DriverManager.getConnection(dataConn,username,password);
+            pst = sqlConn.prepareStatement("insert into connector(StudentId,Firstname,Surname,Address,"+"PostCode,Telephone)");
+            
+            pst.setString(1, jtxtStudentID.getText());
+            pst.setString(2, jtxtFirstname.getText());
+            pst.setString(3, jtxtSurname.getText());
+            pst.setString(4, jtxtAddress.getText());
+            pst.setString(5, jtxtPostCode.getText());
+            pst.setString(6, jtxtTelephone.getText());
+
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Record Added");
+            upDateDB();
+        }catch(ClassNotFoundException ex){
+            java.util.logging.Logger.getLogger(Java_MysqlConn.class.getName()).log(java.util.logging.Level.SEVERE,null, ex);
+        }catch(SQLException ex){
+            java.util.logging.Logger.getLogger(Java_MysqlConn.class.getName()).log(java.util.logging.Level.SEVERE,null, ex);
+        }
     }//GEN-LAST:event_jbtnAddNewActionPerformed
 
     private void jbtnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPrintActionPerformed
