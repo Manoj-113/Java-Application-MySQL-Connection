@@ -14,12 +14,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLDataException;
+import java.sql.SQLException;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.text.DateFormat;
 import java.text.MessageFormat;
 import java.text.SimpleDateFormat;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 
@@ -34,11 +37,57 @@ public class Java_MysqlConn extends javax.swing.JFrame {
     private static final String dataConn = "jdbc:mysql://localhost:336/connector";
     
     Connection sqlConn = null;
+    PreparedStatement pst = null;
+    ResultSet rs = null;
+    int q, i, id, deleteItem;
     
     
     public Java_MysqlConn(String exit) {
         initComponents();
     }
+    
+    
+    
+    public void upDateDB(){
+        
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            sqlConn = DriverManager.getConnection(dataConn,username,password);
+            pst = sqlConn.prepareStatement("select*from connector");
+            
+            rs = pst.executeQuery();
+            ResultSetMetaData stData = rs.getMetaData();
+            
+            q = stData.getColumnCount();
+            
+            DefaultTableModel RecordTable = (DefaultTableModel)jTable1.getModel();
+            RecordTable.setRowCount(0);
+            
+            while(rs.next()){
+                Vector columnData = new Vector();
+                
+                for(i = 1; i<=q; i++){
+                    columnData.add(rs.getShort("id"));
+                    columnData.add(rs.getShort("id"));
+                    columnData.add(rs.getShort("id"));
+                    columnData.add(rs.getShort("id"));
+                    columnData.add(rs.getShort("id"));
+                    columnData.add(rs.getShort("id"));
+                    columnData.add(rs.getShort("id"));
+                    
+                }
+            }
+            
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Java_MysqlConn.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Java_MysqlConn.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+    }
+    
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
